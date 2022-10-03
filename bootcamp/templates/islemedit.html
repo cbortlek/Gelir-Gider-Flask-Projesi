@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post">
+    <input type="hidden" name="id" value = "{{ veri[0] }}"><br>
+    <label> Gelir : </label>
+    <input type="text" name="gelir" value = "{{ veri[1] }}"><br>
+    <label> Gider : </label>
+    <input type="text" name="gider" value = "{{ veri[2] }}"><br>
+    <label> Tarih : </label>
+    <input type="text" name="year" value = "{{ veri[3] }}"><br>
+    <label> Kategori: </label>
+    <input type="text" name="kategori" value = "{{ veri[4] }}"><br>
+    <input type="submit">
+ 
+</form>
+
+{% endblock %}

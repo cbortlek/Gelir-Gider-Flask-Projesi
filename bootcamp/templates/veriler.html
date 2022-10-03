@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul>
+    {% for d in veri %}
+
+    <div class="islem">
+
+        <a href="/islem/{{d[0]}}">
+        <h4> İşlem Detay</h4></a>
+
+        <div>
+            <b>Gelir : </b>{{ d[1] }}
+            <b>Gider : </b>{{ d[2] }}
+            <b>Tarih :</b> {{ d[3] }}
+            <b>Kategori :</b> {{ d[4] }}
+            <b>Gelir-Gider Farkı :</b> {{ d[5] }}
+        </div>
+
+        <form action="/islemdelete/{{ d[0] }}">
+            <input type="submit" 
+            value="Sil">
+        </form>
+
+
+        <form action="/islemedit/{{ d[0] }}">
+            <input type="submit" 
+            value="Guncelle">
+        </form>
+
+
+    </div>
+
+    {% endfor %}
+</ul>
+
+
+
+
+{% endblock %}

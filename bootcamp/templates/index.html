@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul>
+    {% for islem in islemler %}
+
+    <div class="islem">
+        <h4> Veri</h4>
+
+        <div>
+            <b>Gelir :</b>{{ islem.gelir }}
+            <b>Gider :</b>{{ islem.gider }}
+            <b>Tarih :</b> {{ islem.year }}
+            <b>Kategori :</b> {{ islem.kategori }}
+            <b>Gelir-Gider Farkı :</b> {{ islem.toplam }}
+
+        </div>
+    </div>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}
